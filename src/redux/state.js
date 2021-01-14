@@ -1,5 +1,4 @@
-import { rerenderAll } from "../render";
-
+let rerenderAll = () => {};
 let state = {
   profilePage: {
     posts: [
@@ -39,5 +38,9 @@ export let addPost = () => {
 export let updateNewPostText = (newText) => {
   state.profilePage.postElement = newText;
   rerenderAll(state);
+};
+
+export let subscribe = (observer) => {
+  rerenderAll = observer;
 };
 export default state;
