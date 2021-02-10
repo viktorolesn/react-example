@@ -9,7 +9,7 @@ import {
 } from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
-  let state = props.store.getState().messagesPage;
+  let state = props.store.getState().dialogsPage;
   let dialogElementsArray = state.dialogs.map((item) => (
     <DialogItem id={item.id} username={item.username} />
   ));
