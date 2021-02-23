@@ -7,6 +7,7 @@ import Dialogs from "./Dialogs";
 
 const DialogsContainer = (props) => {
   let state = props.store.getState().dialogsPage;
+  let page = props.store.getState().dialogsPage;
 
   let newMessageBody = state.newMessageBody;
 
@@ -23,7 +24,8 @@ const DialogsContainer = (props) => {
       dialogsPage={state}
       newMessageBody={state.newMessageBody}
       sendMessage={onSendMessageClick}
-      updateNewMessage={onNewMessageChange}
+      updateNewMessage={onNewMessageChange} ////
+      ////test example
     />
   );
 };
